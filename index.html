@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حلول - وكالة التوظيف الموسمية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .gold-gradient {
+            background: linear-gradient(90deg, #D4AF37 0%, #F4E5C2 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(90deg, #D4AF37 0%, #F4E5C2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .nav-link:hover {
+            color: #D4AF37 !important;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #D4AF37;
+            color: #1a237e;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        @media (max-width: 768px) {
+            .hero-text {
+                font-size: 2rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/+20" target="_blank" class="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:bg-[#128C7E] transition-all">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="bg-[#1a237e] text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <span class="gold-text-gradient">حلول</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="nav-link text-white hover:text-gold-500 transition">الرئيسية</a>
+                    <a href="#about" class="nav-link text-white hover:text-gold-500 transition">من نحن</a>
+                    <a href="#services" class="nav-link text-white hover:text-gold-500 transition">خدماتنا</a>
+                    <a href="#apply" class="nav-link text-white hover:text-gold-500 transition">كيفية التقديم</a>
+                    <a href="#contact" class="nav-link text-white hover:text-gold-500 transition">اتصل بنا</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a237e] px-4 pt-2 pb-4">
+            <a href="#home" class="block py-2 text-white hover:text-gold-500 transition">الرئيسية</a>
+            <a href="#about" class="block py-2 text-white hover:text-gold-500 transition">من نحن</a>
+            <a href="#services" class="block py-2 text-white hover:text-gold-500 transition">خدماتنا</a>
+            <a href="#apply" class="block py-2 text-white hover:text-gold-500 transition">كيفية التقديم</a>
+            <a href="#contact" class="block py-2 text-white hover:text-gold-500 transition">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative bg-[#1a237e] text-white py-20 md:py-32 overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="hero-text text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    فرص عمل قانونية وآمنة في دول الخليج <span class="gold-text-gradient">للمصريين</span>
+                </h1>
+                <p class="text-lg mb-8 text-gray-300">
+                    حلول توفر فرص عمل في المملكة العربية السعودية والإمارات مع ضمان كافة الإجراءات القانونية والأمان للعمال
+                </p>
+                <a href="#apply" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full inline-block hover:opacity-90 transition shadow-lg">
+                    سجل الآن
+                </a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://www.worldclassopportunities.com/uploads/blogs/173313647829.jpg" alt="عمال في موسم الحج" class="rounded-lg shadow-xl border-4 border-[#D4AF37]">
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 gold-gradient"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a237e] mb-4">من نحن</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://chstaffing.com/wp-content/uploads/2023/03/AdobeStock_215939252.jpg" alt="فريق هلول" class="rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-[#1a237e] mb-6">وكالة حلول للتوظيف الموسمي</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        تأسست شركة حلول عام 2010 كإحدى الشركات الرائدة في مجال التوظيف الموسمي للعمالة المصرية بالمملكة العربية السعودية خلال موسم الحج، حيث نقوم بتوفير فرص عمل في مجال الأضاحي وتسهيل كافة الإجراءات للسفر والعودة.
+                    </p>
+                    <p class="text-gray-700 mb-6 leading-relaxed">
+                        على مدار أكثر من 10 سنوات، ساعدنا الآلاف من العمال المصريين في الحصول على فرص عمل موسمية مربحة مع توفير كافة سبل الراحة والأمان لهم خلال فترة العمل.
+                    </p>
+                    <div class="flex flex-wrap mt-8">
+                        <div class="w-1/2 mb-6">
+                            <div class="flex items-center">
+                                <div class="text-[#D4AF37] text-2xl mr-3">
+                                    <i class="fas fa-briefcase"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#1a237e]">+10 سنوات</h4>
+                                    <p class="text-gray-600 text-sm">خبرة في المجال</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-1/2 mb-6">
+                            <div class="flex items-center">
+                                <div class="text-[#D4AF37] text-2xl mr-3">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-[#1a237e]">+5000 عامل</h4>
+                                    <p class="text-gray-600 text-sm">تم توظيفهم</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a237e] mb-4">خدماتنا</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-file-alt text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">تجهيز أوراق السفر</h3>
+                        <p class="text-gray-700">
+                            إعداد كافة المستندات المطلوبة للسفر بما في ذلك تصاريح العمل والتأشيرات والفحوصات الطبية.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-plane text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">التقديم على الوظائف</h3>
+                        <p class="text-gray-700">
+                            مساعدتك في التقديم على أفضل الوظائف المناسبة لمهاراتك وخبراتك في دول الخليج.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-handshake text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">التوظيف</h3>
+                        <p class="text-gray-700">
+                            نوفر فرص عمل موسمية في مجال الأضاحي بالمملكة العربية السعودية مع أرباح مجزية وظروف عمل مناسبة.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-home text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">الإقامة</h3>
+                        <p class="text-gray-700">
+                            نوفر أماكن إقامة مريحة وقريبة من أماكن العمل مع توفير كافة الخدمات الأساسية للعمال.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-headset text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">الدعم المستمر</h3>
+                        <p class="text-gray-700">
+                            فريق دعم متكامل متاح على مدار الساعة لمساعدتك في حل أي مشكلات قد تواجهك خلال فترة العمل.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="h-48 gold-gradient flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-5xl text-[#1a237e]"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">التأمين الصحي</h3>
+                        <p class="text-gray-700">
+                            نحرص على توفير تأمين صحي شامل لجميع العمال خلال فترة إقامتهم بالمملكة العربية السعودية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Apply Section -->
+    <section id="apply" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a237e] mb-4">كيفية التقديم</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Step 1 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">التسجيل المبدئي</h3>
+                        <p class="text-gray-700">
+                            قم بتعبئة نموذج التسجيل المبدئي عبر موقعنا أو عن طريق زيارة مكتبنا مع إرفاق صورة من بطاقة الرقم القومي.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">المقابلة الشخصية</h3>
+                        <p class="text-gray-700">
+                            سيتم تحديد موعد لمقابلة شخصية لتقييم المهارات وتحديد الوظيفة المناسبة.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">إعداد المستندات</h3>
+                        <p class="text-gray-700">
+                            إعداد كافة المستندات المطلوبة بما في ذلك جواز السفر، الشهادات الصحية، ووثائق العمل.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex items-start mb-10">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">التدريب والتوجيه</h3>
+                        <p class="text-gray-700">
+                            حضور جلسات تدريبية وتوجيهية حول طبيعة العمل واللوائح والقوانين في المملكة العربية السعودية.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="flex items-start">
+                    <div class="step-number">5</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-[#1a237e] mb-3">السفر والعمل</h3>
+                        <p class="text-gray-700">
+                            استلام تأشيرة العمل وتذاكر السفر والانتقال إلى المملكة العربية السعودية لبدء العمل.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <h3 class="text-2xl font-bold text-[#1a237e] mb-6">المستندات المطلوبة</h3>
+                    <div class="bg-gray-100 rounded-lg p-6 inline-block text-right">
+                        <ul class="list-disc pr-5 space-y-2 text-gray-700">
+                            <li>بطاقة الرقم القومي سارية</li>
+                            <li>جواز سفر ساري المفعول (إن وجد)</li>
+                            <li>8 صور شخصية حديثة</li>
+                            <li>شهادة صحية من مستشفى حكومي</li>
+                            <li>شهادة حسن سيرة وسلوك</li>
+                            <li>شهادة مؤهل (إن وجد)</li>
+                        </ul>
+                    </div>
+                    <div class="mt-10">
+                        <a href="#contact" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full inline-block hover:opacity-90 transition shadow-lg">
+                            سجل الآن
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Application Form -->
+    <section id="application" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#1a237e] mb-4">نموذج التقديم على الوظائف</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <section id="application" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#1a237e] mb-4">نموذج التقديم على الوظائف</h2>
+            <div class="w-20 h-1 gold-gradient mx-auto"></div>
+        </div>
+
+        <form action="https://formspree.io/f/xblkdkpp" method="POST" enctype="multipart/form-data" class="bg-white rounded-lg shadow-md p-8">
+            <div class="mb-6">
+                <label for="full-name" class="block text-gray-700 font-bold mb-2">الاسم بالكامل</label>
+                <input type="text" id="full-name" name="full-name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="phone" class="block text-gray-700 font-bold mb-2">رقم الهاتف</label>
+                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="job" class="block text-gray-700 font-bold mb-2">الوظيفة المطلوبة</label>
+                <select id="job" name="job" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
+                    <option value="">-- اختر الوظيفة --</option>
+                    <option value="construction">عامل بناء</option>
+                    <option value="driver">سائق</option>
+                    <option value="cleaner">عامل نظافة</option>
+                    <option value="technician">فني</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+
+            <div class="mb-6">
+                <label for="experience" class="block text-gray-700 font-bold mb-2">عدد سنوات الخبرة</label>
+                <input type="number" id="experience" name="experience" min="0" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="cv" class="block text-gray-700 font-bold mb-2">رفع السيرة الذاتية (PDF)</label>
+                <input type="file" id="cv" name="cv" accept=".pdf" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
+            </div>
+
+            <div class="mb-6">
+                <label for="passport" class="block text-gray-700 font-bold mb-2">صورة جواز السفر (إن وجد)</label>
+                <input type="file" id="passport" name="passport" accept="image/*" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]">
+            </div>
+
+            <button type="submit" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full w-full hover:opacity-90 transition shadow-lg">
+                إرسال الطلب
+            </button>
+        </form>
+    </div>
+</section>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-[#1a237e] text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">اتصل بنا</h2>
+                <div class="w-20 h-1 gold-gradient mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">معلومات التواصل</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-[#D4AF37] text-xl mt-1 ml-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">العنوان</h4>
+                                <p>#address</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#D4AF37] text-xl mt-1 ml-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">الهاتف</h4>
+                                <p>+20 123 456 7890</p>
+                                <p>+20 987 654 3210</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#D4AF37] text-xl mt-1 ml-4">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">واتساب</h4>
+                                <p>+20 123 456 7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#D4AF37] text-xl mt-1 ml-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">البريد الإلكتروني</h4>
+                                <p>info@heloul.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-[#D4AF37] text-xl mt-1 ml-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">ساعات العمل</h4>
+                                <p>من السبت إلى الخميس: 9 صباحاً - 5 مساءً</p>
+                                <p>الجمعة: مغلق</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6">أرسل لنا رسالة</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">الاسم بالكامل</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block mb-1">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block mb-1">رقم الهاتف</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-white">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block mb-1">الرسالة</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-white"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full inline-block hover:opacity-90 transition shadow-lg">
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4 flex items-center">
+                        <span class="gold-text-gradient">هلول</span>
+                    </h3>
+                    <p class="text-gray-400 max-w-xs">
+                        وكالة حلول للتوظيف الموسمي - نوفر فرص عمل موسمية في المملكة العربية السعودية خلال موسم الحج
+                    </p>
+                </div>
+                
+                <div class="mb-8 md:mb-0">
+                    <h4 class="text-lg font-bold mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#D4AF37] transition">الرئيسية</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-[#D4AF37] transition">من نحن</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-[#D4AF37] transition">خدماتنا</a></li>
+                        <li><a href="#apply" class="text-gray-400 hover:text-[#D4AF37] transition">كيفية التقديم</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-[#D4AF37] transition">اتصل بنا</a></li>
+                        <li><a href="#application" class="text-gray-400 hover:text-[#D4AF37] transition">نموذج التقديم</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">تابعنا</h4>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#" class="text-gray-400 hover:text-[#D4AF37] text-xl transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#D4AF37] text-xl transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#D4AF37] text-xl transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#D4AF37] text-xl transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-lg font-bold mb-2">اشترك في النشرة البريدية</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="بريدك الإلكتروني" class="px-4 py-2 rounded-r bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] text-white">
+                            <button class="gold-gradient text-[#1a237e] font-bold px-4 rounded-l hover:opacity-90 transition">
+                                اشترك
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+                <p>© 2023 حلول للتوظيف الموسمي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
