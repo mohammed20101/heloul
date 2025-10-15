@@ -25,7 +25,7 @@
             color: #D4AF37 !important;
         }
         .service-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.02);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
         .step-number {
@@ -48,6 +48,30 @@
         #social-icons {
             padding-right: 20px;
             font-size: xx-large;
+        }
+        #noice {
+            padding-right: 30px;
+        }
+        #noice2{
+            padding-right: 30px;
+        }
+        #hero-txt{
+            padding: 13px;
+            line-height: 1.7;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            backdrop-filter: blur(10px);
+        }
+
+        a, button {
+            transition: all 0.3s ease;
+        }
+
+        a:hover, button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
         }
        
     </style>
@@ -100,18 +124,18 @@
     <section id="home" class="relative bg-[#1a237e] text-white py-20 md:py-32 overflow-hidden">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="hero-text text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <h1 class="hero-text text-4xl md:text-5xl font-bold mb-6 leading-relaxed" id="hero-txt">
                     فرص عمل قانونية وآمنة في دول الخليج <span class="gold-text-gradient">للمصريين</span>
                 </h1>
                 <p class="text-lg mb-8 text-gray-300">
-                    حلول توفر فرص عمل في المملكة العربية السعودية والإمارات مع ضمان كافة الإجراءات القانونية والأمان للعمال
+                    حلول توفر فرص عمل في المملكة العربية السعودية مع ضمان كافة الإجراءات القانونية والأمان للعمال
                 </p>
                 <a href="#apply" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full inline-block hover:opacity-90 transition shadow-lg">
                     سجل الآن
                 </a>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="https://www.worldclassopportunities.com/uploads/blogs/173313647829.jpg" alt="عمال في موسم الحج" class="rounded-lg shadow-xl border-4 border-[#D4AF37]">
+                <img src="./3F161B95-DCAA-4918-B9D1-0AE5CED75B58.PNG" alt="عمال في موسم الحج" class="rounded-lg shadow-xl border-4 border-[#D4AF37]">
             </div>
         </div>
         <div class="absolute bottom-0 left-0 right-0 h-16 gold-gradient"></div>
@@ -130,11 +154,11 @@
                     <img src="https://chstaffing.com/wp-content/uploads/2023/03/AdobeStock_215939252.jpg" alt="فريق هلول" class="rounded-lg shadow-lg">
                 </div>
                 <div class="md:w-1/2">
-                    <h3 class="text-2xl font-bold text-[#1a237e] mb-6">وكالة حلول للتوظيف الموسمي</h3>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-[#1a237e] mb-6" id="noice2">وكالة حلول للتوظيف الموسمي</h3>
+                    <p class="text-gray-700 mb-6 leading-relaxed" id="noice">
                         تأسست شركة حلول عام 2010 كإحدى الشركات الرائدة في مجال التوظيف الموسمي للعمالة المصرية بالمملكة العربية السعودية خلال موسم الحج، حيث نقوم بتوفير فرص عمل في مجال الأضاحي وتسهيل كافة الإجراءات للسفر والعودة.
                     </p>
-                    <p class="text-gray-700 mb-6 leading-relaxed">
+                    <p class="text-gray-700 mb-6 leading-relaxed" id="noice">
                         على مدار أكثر من 10 سنوات، ساعدنا الآلاف من العمال المصريين في الحصول على فرص عمل موسمية مربحة مع توفير كافة سبل الراحة والأمان لهم خلال فترة العمل.
                     </p>
                     <div class="flex flex-wrap mt-8">
@@ -385,6 +409,7 @@
                 <input type="number" id="experience" name="experience" min="0" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-[#D4AF37]" required>
             </div>
 
+
             <button type="submit" class="gold-gradient text-[#1a237e] font-bold py-3 px-8 rounded-full w-full hover:opacity-90 transition shadow-lg">
                 إرسال الطلب
             </button>
@@ -578,3 +603,7 @@
     </script>
 </body>
 </html>
+
+        p {
+            line-height: 1.8;
+        }
